@@ -1,0 +1,24 @@
+<table>
+    <th>
+        <tr class="main-heading">
+            <td>Label</td>
+            <td>Value</td>
+        </tr>
+        <tr>
+            <td>FirstName</td>
+            <td>{{Firstname}}</td>
+        </tr>
+        <tr>
+            <td>LastName</td>
+            <td>{{Lastname}}</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>{{age}}</td>
+        </tr>
+    </th>
+</table>
+
+<ul *ngFor="let student of studentDetail">
+    <li> {{student.name}},{{student.age }}</li>
+  </ul>

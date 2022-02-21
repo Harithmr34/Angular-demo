@@ -1,0 +1,48 @@
+<h2>{{name}}</h2>
+<h2>{{name.length}}</h2>
+{{myapplication()}}
+<br><br>
+
+<div class="input-wrp"><input [id] ="inputId" [(ngModel)]="inputname" placeholder="Enter Your Name">
+  <br><br>{{inputname}}<br><br></div>
+<br><br>
+<button style="color: #fff;background-color:red" [style.font-size.px] ="buttonSize" [style.padding.px] ="buttonOuterSpace">Submit</button>
+<br><br>
+<div  class="multiline-style-button" >
+  <button class="active" [class.new-active]="applynewactive" style="color:red" [ngStyle]="muyltilinedtyle()">Multiline style Button</button>
+  <br><br>
+  <button class="active" [class.new-active]="!applynewactive" style="color:red" [ngStyle]="muyltilinedtyle()">Multiline style Button</button>
+<br><br>
+<button (click) ="onClick()">Click Me</button>
+<br><br>
+{{message}}
+<app-student-component>npm start</app-student-component>
+<br><br>
+<div *ngFor = "let name of names; index as k">
+  <h3>{{k}} {{name}}</h3>
+</div><br><br>
+</div>
+
+<button (click)="switchMode()">Bulb</button>
+<br>
+<div *ngIf="switch;then SwitchOn else Switchoff"></div>
+<ng-template #SwitchOn>Bulb is ON</ng-template>
+<ng-template #Switchoff>Bulb is OFF</ng-template>
+<br><br>
+<app-test [parentElement]="Parentname"></app-test>
+<br><br>
+<h3>Routing </h3>
+<ul>
+  <li><a routerLink="home">Home</a></li>
+  <li><a routerLink="student">Student</a></li>
+</ul>
+
+<br><br>
+<ul *ngFor="let std of students">
+  <li>ID :{{std.id}}</li>
+  <li>NAME : {{std.name}}</li>
+  <li>AGE : {{std.age}}</li>
+</ul>
+<router-outlet></router-outlet>
+
+
